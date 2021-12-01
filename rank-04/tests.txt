@@ -1,0 +1,6 @@
+./microshell /bin/ls
+./microshell cd .. ";" pwd
+./microshell ";" ";" ";"
+
+// this tests must require input in the terminal, if not, stdin was not properly set to default afer the pipe
+./microshell /bin/ls "|" /bin/grep microshell ";" grep uwu
