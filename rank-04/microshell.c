@@ -33,7 +33,7 @@ void	fatal_error(char **s)
 }
 
 // if first argument is NUll then has 0 arguments
-// if second argument is NULL then has more than 1 argument
+// if second argument is not NULL then has more than 1 argument
 // both cases are wrong
 void	cd(char **arguments)
 {
@@ -85,7 +85,6 @@ int		main(int argc, char **argv, char **env)
 
 	for (int i = 1; i < argc; i++)
 	{
-		// this could be done in one line 
 		int x = parse_next_command(argv, &command, &type);
 		argv = &argv[x];
 
